@@ -39,6 +39,19 @@ cc    -c -o machine.o machine.c
 cc     main.c step.o machine.o   -o main
 ```
 
+Building for a micro
+--------------------
+
+You're going to need an `avr-gcc` toolchain to do this. If you're on a mac, the
+easiest way to get this set up is to use [crosspack](http://www.obdev.at/products/crosspack/index.html).
+
+If you're on another platform, you're kind of on your own. If/when you get a
+toolchain set up, let me know how you went and I'll add some information here.
+
+```
+$ make -f Makefile.avr hex
+```
+
 Running
 -------
 
