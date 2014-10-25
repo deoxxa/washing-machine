@@ -5,7 +5,7 @@
 #include "machine.h"
 
 int main(int argc, char** argv) {
-  int rc;
+  int rc, i;
   machine_t machine;
 
   step_t steps[] = {
@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
   int c = sizeof(steps) / sizeof(step_t);
 
   printf("PROGRAM:\n\n");
-  for (int i=0;i<c;++i) {
+  for (i=0;i<c;++i) {
     printf("[%02d] %s %d\n", i, op_names[steps[i].op], steps[i].arg);
   }
   printf("\n");
@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
   printf("MACHINE INTIALISED!\n\n");
 
   printf("RUNNING PROGRAM...\n\n");
-  for (int i=0;i<c;++i) {
+  for (i=0;i<c;++i) {
     printf("[%02d] %s %d\n", i, op_names[steps[i].op], steps[i].arg);
 
     rc = machine_run(&machine, &steps[i]);
