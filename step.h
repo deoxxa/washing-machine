@@ -11,7 +11,7 @@ typedef enum op_e {
   OP_FILL,
   OP_WASH,
   OP_SPIN,
-  OP_STOP,
+  OP_STOP
 } op_t;
 
 typedef struct step_s {
