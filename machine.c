@@ -26,7 +26,7 @@ int machine_run_heat(machine_t* machine, step_t* step) {
   machine->heat = step->arg;
 
   return 0;
-};
+}
 
 int machine_run_fill(machine_t* machine, step_t* step) {
   machine->water = step->arg;
